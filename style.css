@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif; /* Digital-style font */
+    background-color: #222; /* Dark background */
+    color: #00ff7f; /* Neon green text, classic digital clock color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide scrollbars if content slightly overflows */
+}
+
+.clock-container {
+    background-color: #111; /* Slightly darker container */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 127, 0.3), /* Outer glow */
+                inset 0 0 10px rgba(0, 255, 127, 0.2); /* Inner subtle glow */
+    text-align: center;
+}
+
+#clock {
+    font-size: 4rem; /* Large font size for the clock */
+    letter-spacing: 0.1em; /* Spacing between characters */
+    text-shadow: 0 0 10px #00ff7f; /* Text glow */
+}
+
+#clock span {
+    /* If you want to style individual parts, you can do it here */
+    /* e.g., #ampm { font-size: 1.5rem; margin-left: 10px; } */
+}
+
+#ampm {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    vertical-align: middle; /* Align AM/PM nicely with the numbers */
+}
+
+/* Responsive font size */
+@media (max-width: 600px) {
+    #clock {
+        font-size: 2.5rem;
+    }
+    #ampm {
+        font-size: 1rem;
+    }
+    .clock-container {
+        padding: 20px 30px;
+    }
+}
