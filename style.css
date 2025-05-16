@@ -2,6 +2,9 @@ body{
     margin: 0;
     font-family: 'Orbitron', sans-serif;
     background-color: #222;
+    background: url(wallppaper.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color:#00ff7f;
     display:flex;
     justify-content: center;
