@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: 'Orbitron', sans-serif;
-    background-color: whitesmoke;
+    background-color: #222;
     color:#00ff7f;
     display:flex;
     justify-content: center;
