@@ -1,28 +1,35 @@
-function updateClock() {
+function updateClock(){
     const now = new Date();
 
     let hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
 
-    const ampm = hours >= 12 ? 'PM' : 'AM';
+    //convert to 12 hour format
+    let ampm;
+    if(hours >= 12){
+        ampm = "PM";
+    }else{
+        ampm = "AM";
+    }
 
-    // Convert to 12-hour format
+
     hours = hours % 12;
-    hours = hours ? hours : 12; // The hour '0' should be '12'
+    if(hours === 0){
+        hours = 12; 
+    }
 
-    // Pad with leading zeros if needed
+    //pad with leading zeros where necessary
     const paddedHours = String(hours).padStart(2, '0');
     const paddedMinutes = String(minutes).padStart(2, '0');
     const paddedSeconds = String(seconds).padStart(2, '0');
 
-    // Update the HTML elements
+    //DOM Update to HTML
     document.getElementById('hours').textContent = paddedHours;
     document.getElementById('minutes').textContent = paddedMinutes;
     document.getElementById('seconds').textContent = paddedSeconds;
     document.getElementById('ampm').textContent = ampm;
 }
 
-// Update the clock immediately and then every second
 updateClock();
 setInterval(updateClock, 1000);
